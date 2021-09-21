@@ -1,0 +1,41 @@
+while Teleport == true do
+
+function TeleportTo(placeCFrame)
+
+   local player = game.Players.LocalPlayer
+
+   if player.Character then
+
+    player.Character.HumanoidRootPart.CFrame = placeCFrame;
+
+    wait(15)
+
+  end
+
+end
+
+TeleportTo(game:GetService("Workspace").Tower.Platforms.PlatformPart.CFrame)
+   if GC then
+       for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+           if v["Disable"] then
+               v["Disable"](v)
+           elseif v["Disconnect"] then
+               v["Disconnect"](v)
+           end
+       end
+   end
+
+
+
+anti afk might not work, so maybe exe it separate -- credits to boshy#2541 for the anti afk and helping me with the script
+
+   local GC = getconnections or get_signal_cons
+   if GC then
+       for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+           if v["Disable"] then
+               v["Disable"](v)
+           elseif v["Disconnect"] then
+               v["Disconnect"](v)
+           end
+       end
+   end
