@@ -1,0 +1,42 @@
+-- Created by Ezpi#0474
+
+--// Services \\--
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+
+--// Variables \\--
+local Player = Players.LocalPlayer
+local NPCFolder = Workspace:WaitForChild("NPCFolder")
+local Hit = ReplicatedStorage:WaitForChild("RemoteEvent"):WaitForChild("SwordHit")
+
+--// Get Highest Health Enemy \\--
+function GetEnemy()
+    -- Get NPCs
+    local Enemies = NPCFolder:GetChildren()
+    -- Sort NPCs
+    if #Enemies >= 1 then
+        table.sort(Enemies, function(A_1, A_2)
+            if A_1:FindFirstChild("Humanoid") and A_2:FindFirstChild("Humanoid") then
+                return A_1.Humanoid.Health > A_2.Humanoid.Health
+            end
+            return false
+        end)
+    end
+    -- Return
+    if #Enemies ~= 0 then
+        return Enemies[1]
+    end
+    return nil
+end
+
+--// AutoFarm \\--
+while wait(0.1) do
+    local Enemy = GetEnemy()
+    if Enemy ~= nil then
+        repeat
+            Hit:FireServer(Enemy.Humanoid, Enemy, 2)
+            wait()
+        until Enemy.Parent == nil or not Enemy:FindFirstChild("Humanoid") or Enemy.Humanoid.Health <= 0
+    end
+end
