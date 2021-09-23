@@ -1,0 +1,9 @@
+_G.Loop = true
+while _G.Loop == true do
+local args = {
+   [1] = game:GetService("Players").LocalPlayer.Quests.Quests7
+}
+
+game:GetService("ReplicatedStorage").RemoteFunction.ClaimQuestsFunction:InvokeServer(unpack(args))
+wait()
+end
