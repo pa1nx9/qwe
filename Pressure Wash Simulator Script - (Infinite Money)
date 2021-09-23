@@ -1,0 +1,4 @@
+local ohNumber1 = 2561828492367
+local ohNumber2 = 9e18
+
+game:GetService("ReplicatedStorage").Remotes.SurfaceCompleted:FireServer(ohNumber1, ohNumber2)
