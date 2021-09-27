@@ -1,0 +1,46 @@
+wait(.1)
+game:GetService("TeleportService"):Teleport(7346416636,game:GetService("Players").LocalPlayer)
+wait(.5)
+local function bsf()
+                       local n = false
+
+                       for i, v2 in pairs(workspace.Dropped:GetChildren()) do
+                           if
+                               v2.Owner.Value == game.Players.LocalPlayer or
+                                   v2.Owner.Value == game.Players.LocalPlayer.Character
+                                   
+                                   --print("take")
+                            then
+                                print("take")
+                               
+                                for is, vs in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                                   if vs:IsA("MeshPart") or vs:IsA("BasePart") and v then
+                                       print("1n1", v2, vs)
+                                       
+                                       firetouchinterest(vs, v2.Handle, 1)
+                                       
+                                       firetouchinterest(vs, v2.Handle, 0)
+                                       
+                                       --char.HumanoidRootPart.CFrame = v2.Handle.CFrame
+                                       
+                                       
+                                       n = true
+                                       
+                                       print(2)
+                                       
+                                       break
+                                   end
+                                end
+                           
+                           print(3)
+                           end
+                       end
+
+                       if n then
+                           wait()
+                           
+                           bsf()
+                       end
+                   end
+
+                       bsf()
