@@ -1,0 +1,4 @@
+-- Noboline 1.3.2 (8d97f1f9-43e3-482a-973b-539c86fa70ec)
+-- Script by dogix
+-- Kavo UI Library by xHeptc
+loadstring(game:HttpGet'https://dogix.wtf/scripts/noboline/8d97f1f9-43e3-482a-973b-539c86fa70ec')()
