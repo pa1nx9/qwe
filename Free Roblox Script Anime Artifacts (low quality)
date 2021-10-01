@@ -1,0 +1,11 @@
+
+while wait(0.1)do
+    
+local args = {
+    [1] = workspace.NPCFolder.Sakazuki.Humanoid,
+    [2] = workspace.NPCFolder.Sakazuki,
+    [3] = 3
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent.SwordHit:FireServer(unpack(args))
+end
