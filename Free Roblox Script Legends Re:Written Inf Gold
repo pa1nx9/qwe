@@ -1,0 +1,7 @@
+local args = {
+    [1] = "IronSword",
+    [2] = "Swords",
+    [3] = -9999999
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
