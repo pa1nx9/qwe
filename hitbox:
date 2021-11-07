@@ -1,0 +1,7 @@
+game.Players.LocalPlayer.Character.HumanoidRootPart.Transparency = 0.7
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Size = Vector3.new(20, 0.01, 20)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+wait()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
