@@ -1,0 +1,3 @@
+local number_1 = 1;
+local Target = game:GetService("ReplicatedStorage").TeleportRequest;
+Target:InvokeServer(number_1);
